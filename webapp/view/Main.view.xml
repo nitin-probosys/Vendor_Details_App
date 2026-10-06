@@ -1,0 +1,26 @@
+<mvc:View controllerName="ns.doctopdf.zdoctopdf.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page title="Attachment Viewer">
+        <content>
+            <Table id="attachmentTable" items="{base64Model>/d/results}">
+                <columns>
+                    <Column>
+                        <Text text="File Name" />
+                    </Column>
+                    <Column width="10rem">
+                        <Text text="Action" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{base64Model>FileName}" />
+                            <Button text="Preview" icon="sap-icon://pdf-attachment" press="onPreviewPdf" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
